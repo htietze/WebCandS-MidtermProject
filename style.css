@@ -1,0 +1,82 @@
+#mainSection {
+    position: absolute;
+    z-index: -1;
+    height: 600px;
+    width: 650px;
+    border: 5px outset white;
+    margin: 15px;
+    padding: 5px;
+    background-image: linear-gradient(to bottom right, blue, black);
+}
+
+#partyHeader {
+    margin-top: -25px;
+    border: 3px outset white;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    background-image: linear-gradient(to bottom right, blue, black);
+    width: fit-content;
+    height: 40px;
+    font-family: 'Squada One', cursive;
+    text-shadow: 5px 3px 7px black;
+}
+
+.character {
+    border: 3px outset white;
+    display: block;
+    margin-left: left;
+    margin: 30px;
+    box-shadow: 6px 6px 7px black;
+}
+
+#firstOptions {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    top: 30px;
+    left: 500px;
+    border: 3px outset white;
+    background-image: linear-gradient(to bottom right, blue, black);
+}
+
+.optionItem {
+    color: white;
+    font-size: 24px;
+    padding-left: 30px;
+    font-family: 'Squada One', cursive;
+    text-shadow: 5px 3px 7px black;
+    line-height: 10px;
+}
+
+#partyInfo {
+    border: 3px outset white;
+    color: white;
+    position: relative;
+    width: 200px;
+    height: 100px;
+    top: 75px;
+    left: 500px;
+    font-size: 22px;
+    line-height: 10px;
+    padding-left: 30px;
+    font-family: 'Squada One', cursive;
+    text-shadow: 5px 3px 7px black;
+    background-image: linear-gradient(to bottom right, blue, black);
+}
+
+#middleChar {
+    margin-left: 75px;
+}
+
+body {
+    background-color: black;
+}
+
+#time {
+    padding-left: 40px;
+}
+
+#money {
+    padding-left: 40px;
+}
