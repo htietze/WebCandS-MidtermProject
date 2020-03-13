@@ -15,3 +15,32 @@ function getDate() {
     let second = date.getSeconds()
     return `${hour} : ${minute} : ${second}`
 }
+
+let app = new Vue({
+    el:'#app',
+    data: {
+        itemDisplay: false,
+        equipDisplay: false,
+    },
+    methods: {
+        items() {
+            if (this.itemDisplay === false) {
+                this.itemDisplay = true
+            } else {
+                this.itemDisplay = false
+            }
+            this.equipDisplay = false
+        },
+        equip() {
+            if (this.equipDisplay === false) {
+                this.equipDisplay = true
+            } else {
+                this.equipDisplay = false
+            }
+            this.itemDisplay = false
+        },
+        order() {
+
+        }
+    }
+})

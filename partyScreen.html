@@ -6,48 +6,62 @@
         <title>Menu</title>
         <link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://unpkg.com/vue@2.6.7/dist/vue.js"></script>
         <script async defer src='partyScreen.js'></script>
 
     </head>
 
     <body>
+        <div id='app'>
+            <div id='mainSection'>
+                <h1 id='partyHeader'>Party</h1>
 
-        <div id='mainSection'>
-            <h1 id='partyHeader'>Party</h1>
+                <div id="characters">
 
-            <div id="characters">
+                    <img src="charlie.jpeg"
+                    class="character"
+                    width=150>
+                <img src="greta.jpg"
+                    class="character"
+                    id="middleChar"
+                    width=150>
+                <img src="oscar.jpg"
+                    class="character"
+                    width=150>
+    
+                </div>
 
-                <img src="charlie.jpeg"
-                class="character"
-                width=150>
-            <img src="greta.jpg"
-                class="character"
-                id="middleChar"
-                width=150>
-            <img src="oscar.jpg"
-                class="character"
-                width=150>
- 
             </div>
 
-        </div>
+            <div id='firstOptions'>
+                <p class='optionItem' v-on:click='items'>Items</p>
+                <p class='optionItem' v-on:click='equip'>Equip</p>
+                <p class='optionItem' v-on:click='order'>Order</p>
+                <br> <!-- Can replace with new options later, if wanted -->
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p class='optionItem'>Quit</p>
+            </div>
 
-        <div id='firstOptions'>
-            <p class='optionItem'>Items</p>
-            <p class='optionItem'>Equip</p>
-            <p class='optionItem'>Order</p>
-            <br> <!-- Can replace with new options later, if wanted -->
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <p class='optionItem'>Quit</p>
-        </div>
+            <div id='popupMenus'>
+                <div id='itemMenu' v-if='itemDisplay'>
+                    <p>Item test</p>
+                </div>
 
-        <div id='partyInfo'>
-            <p>Time<span id='time'></span></p>
-            <p>Gold<span id='money'></span></p>
+                <div id='equipMenu' v-if='equipDisplay'>
+                    <p>Equip test</p>
+                </div>
+
+            </div>
+
+            <div id='partyInfo'>
+                <p>Time<span id='time'></span></p>
+                <p>Gold<span id='money'></span></p>
+            </div>
+
         </div>
 
     </body>
