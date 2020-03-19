@@ -50,6 +50,7 @@
 }
 
 #itemMenu {
+    color: white;
     position: absolute;
     z-index: 1;
     height: 550px;
@@ -58,6 +59,26 @@
     left: 50px;
     border: 3px outset silver;
     background-image: linear-gradient(to bottom right, blue, black);
+}
+
+#itemTable {
+    margin: 10%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+th {
+    text-align: left;
+    border-bottom: 1px solid white;
+    width: 90%;
+}
+
+.quantity {
+    text-align: left;
+}
+
+.item {
+    line-height: 25px;
 }
 
 #equipMenu {

@@ -21,11 +21,23 @@ let app = new Vue({
     data: {
         itemDisplay: false,
         equipDisplay: false,
+        itemList: ['Hi-Potion', 'Tent', 'Antidote', 'Eye Drops',
+            'Elixir', 'X-Potion', 'Megalixir', 'Remedy'],
+        counter: 0,
+        itemName: '',
+        itemAmount: '',
+        rowData: []
     },
     methods: {
         items() {
             if (this.itemDisplay === false) {
                 this.itemDisplay = true
+                if (this.counter === 0) {
+                    this.addItem()
+                    this.addItem()
+                    this.addItem()
+                    this.counter++
+                }
             } else {
                 this.itemDisplay = false
             }
@@ -41,6 +53,21 @@ let app = new Vue({
         },
         order() {
 
+        },
+        addItem() {
+            console.log('test')
+            let testObj = {
+                itemName: this.randomItem(),
+                itemAmount: this.randomQuantity()
+            }
+            this.rowData.push(testObj)
+        },
+        randomItem() {
+            let bup = this.itemList[Math.floor(Math.random() * this.itemList.length)]
+            return bup
+        },
+        randomQuantity() {
+            return Math.floor(Math.random() * 14)+1
         }
     }
 })

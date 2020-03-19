@@ -48,7 +48,14 @@
 
             <div id='popupMenus'>
                 <div id='itemMenu' v-if='itemDisplay'>
-                    <p>Item test</p>
+                    <table id='itemTable'>
+                        <tr><th>Items</th><th class='quantity'>Amount</th></tr>
+                        <tr class='item'><td>Potion</td><td class='quantity'>3</td></tr>
+                        <tr v-for='item in rowData' class='item'>
+                            <td>{{ item.itemName }}</td>
+                            <td class='quantity'>{{ item.itemAmount }}</td>
+                        </tr>
+                    </table>
                 </div>
 
                 <div id='equipMenu' v-if='equipDisplay'>
