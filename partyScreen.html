@@ -18,7 +18,7 @@
 
                 <div id="characters">
 
-                    <img src="charlie.jpeg"
+                <img src="charlie.jpeg"
                     class="character"
                     width=150>
                 <img src="greta.jpg"
@@ -50,7 +50,7 @@
                 <div id='itemMenu' v-if='itemDisplay'>
                     <table id='itemTable'>
                         <tr><th>Items</th><th class='quantity'>Amount</th></tr>
-                        <tr class='item'><td>Potion</td><td class='quantity'>3</td></tr>
+                        <tr class='item'><td>Potion</td><td class='quantity'>{{ potionCount }}</td></tr>
                         <tr v-for='item in rowData' class='item'>
                             <td>{{ item.itemName }}</td>
                             <td class='quantity'>{{ item.itemAmount }}</td>
@@ -61,14 +61,14 @@
                 <div id='equipMenu' v-if='equipDisplay'>
                     <p>Equip test</p>
                 </div>
-
             </div>
+        </div>
 
-            <div id='partyInfo'>
+        <div id='partyInfo'>
+            <div id='infoText'>
                 <p>Time<span id='time'></span></p>
                 <p>Gold<span id='money'></span></p>
             </div>
-
         </div>
 
     </body>

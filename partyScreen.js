@@ -5,9 +5,6 @@ setInterval( () => {
     time.innerHTML = getDate()
 }, 1000)
 
-let money = document.querySelector('#money')
-money.innerHTML = Math.floor(Math.random() * 100000)
-
 function getDate() {
     let date = new Date()
     let hour = date.getHours()
@@ -15,6 +12,9 @@ function getDate() {
     let second = date.getSeconds()
     return `${hour} : ${minute} : ${second}`
 }
+
+let money = document.querySelector('#money')
+money.innerHTML = Math.floor(Math.random() * 100000)
 
 let app = new Vue({
     el:'#app',
@@ -26,17 +26,20 @@ let app = new Vue({
         counter: 0,
         itemName: '',
         itemAmount: '',
+        potionCount: '',
+        duplicateCheck: [],
         rowData: []
     },
     methods: {
         items() {
             if (this.itemDisplay === false) {
                 this.itemDisplay = true
-                if (this.counter === 0) {
-                    this.addItem()
-                    this.addItem()
+                while (this.counter < 3) {
                     this.addItem()
                     this.counter++
+                    if (this.counter === 2) {
+                        this.potionCount = this.randomQuantity()
+                    }
                 }
             } else {
                 this.itemDisplay = false
@@ -52,18 +55,22 @@ let app = new Vue({
             this.itemDisplay = false
         },
         order() {
-
+            alert("Whoops. Haven't added it.")
         },
         addItem() {
-            console.log('test')
-            let testObj = {
+            // https://stackoverflow.com/questions/52211682/add-rows-to-the-table-dynamically-with-the-use-of-vue-js
+            let itemObj = {
                 itemName: this.randomItem(),
                 itemAmount: this.randomQuantity()
             }
-            this.rowData.push(testObj)
+            this.duplicateCheck.push(itemObj.itemName)
+            this.rowData.push(itemObj)
         },
         randomItem() {
             let bup = this.itemList[Math.floor(Math.random() * this.itemList.length)]
+            while (this.duplicateCheck.includes(bup)) {
+            bup = this.itemList[Math.floor(Math.random() * this.itemList.length)]
+            }
             return bup
         },
         randomQuantity() {

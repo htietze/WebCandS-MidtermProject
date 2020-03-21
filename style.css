@@ -59,6 +59,8 @@
     left: 50px;
     border: 3px outset silver;
     background-image: linear-gradient(to bottom right, blue, black);
+    font-family: 'Squada One', cursive;
+    font-size: larger;
 }
 
 #itemTable {
@@ -102,8 +104,6 @@ th {
     top: 400px;
     left: 520px;
     font-size: 22px;
-    line-height: 10px;
-    padding-left: 30px;
     font-family: 'Squada One', cursive;
     text-shadow: 5px 3px 7px black;
     background-image: linear-gradient(to bottom right, blue, black);
@@ -118,9 +118,15 @@ body {
 }
 
 #time {
-    padding-left: 40px;
+    padding-left: 15%;
 }
 
 #money {
-    padding-left: 40px;
+    padding-left: 15%;
+}
+
+#infoText {
+    padding-left: 15%;
+    padding-top: 5%;
+    line-height: 6px;
 }
