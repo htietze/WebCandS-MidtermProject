@@ -57,6 +57,9 @@ let app = new Vue({
         order() {
             alert("Whoops. Haven't added it.")
         },
+        quit() {
+            alert("Er.. can't do that either!")
+        },
         addItem() {
             // https://stackoverflow.com/questions/52211682/add-rows-to-the-table-dynamically-with-the-use-of-vue-js
             let itemObj = {
@@ -78,3 +81,30 @@ let app = new Vue({
         }
     }
 })
+
+fillHPBars('firstHP')
+fillHPBars('secondHP')
+fillHPBars('thirdHP')
+fillMPBars('firstMP')
+fillMPBars('secondMP')
+fillMPBars('thirdMP')
+
+function fillHPBars(elementID) {
+    let canvas = document.getElementById(elementID)
+    let context = canvas.getContext('2d')
+    context.fillStyle = '#00A416'
+    context.fillRect(0,0,200,30)
+    context.fillStyle = '#FFFFFF'
+    context.font = '15px Arial'
+    context.fillText('HP', 3, 15)
+}
+
+function fillMPBars(elementID) {
+    let canvas = document.getElementById(elementID)
+    let context = canvas.getContext('2d')
+    context.fillStyle = '#0064DD'
+    context.fillRect(0,0,200,30)
+    context.fillStyle = '#FFFFFF'
+    context.font = '15px Arial'
+    context.fillText('MP', 3, 15)
+}

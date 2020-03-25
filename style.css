@@ -94,6 +94,14 @@ th {
     background-image: linear-gradient(to bottom right, blue, black);
 }
 
+#equipText {
+    color: white;
+    font-size: 24px;
+    padding-left: 30px;
+    font-family: 'Squada One', cursive;
+    text-shadow: 5px 3px 7px black;
+}
+
 #partyInfo {
     border: 3px outset silver;
     color: white;
@@ -110,7 +118,7 @@ th {
 }
 
 #middleChar {
-    margin-left: 75px;
+    margin-left: 50px;
 }
 
 body {
@@ -129,4 +137,92 @@ body {
     padding-left: 15%;
     padding-top: 5%;
     line-height: 6px;
+}
+
+#firstHP {
+    position: absolute;
+    border: 1px outset silver;
+    height: 30px;
+    width: 200px;
+    left: 38%;
+    top: 16%;
+}
+
+#firstMP {
+    position: absolute;
+    border: 1px outset silver;
+    height: 30px;
+    width: 200px;
+    left: 38%;
+    top: 24%; 
+}
+
+#secondHP {
+    position: absolute;
+    border: 1px outset silver;
+    height: 30px;
+    width: 200px;
+    left: 38%;
+    top: 46%;
+}
+
+#secondMP {
+    position: absolute;
+    border: 1px outset silver;
+    height: 30px;
+    width: 200px;
+    left: 38%;
+    top: 54%;
+}
+
+#thirdHP {
+    position: absolute;
+    border: 1px outset silver;
+    height: 30px;
+    width: 200px;
+    left: 38%;
+    top: 76%;
+}
+
+#thirdMP {
+    position: absolute;
+    border: 1px outset silver;
+    height: 30px;
+    width: 200px;
+    left: 38%;
+    top: 84%;
+}
+
+#firstCharacter {
+    position: absolute;
+    left: 38%;
+    top: 8%;
+    color: white;
+    font-family: 'Squada One', cursive;
+    font-size: larger;
+    text-shadow: 5px 3px 7px black;
+}
+
+#secondCharacter {
+    position: absolute;
+    left: 38%;
+    top: 38%;
+    color: white;
+    font-family: 'Squada One', cursive;
+    font-size: larger;
+    text-shadow: 5px 3px 7px black;
+}
+
+#thirdCharacter {
+    position: absolute;
+    left: 38%;
+    top: 68%;
+    color: white;
+    font-family: 'Squada One', cursive;
+    font-size: larger;
+    text-shadow: 5px 3px 7px black;
+}
+
+.statBar {
+    box-shadow: 6px 6px 7px black;
 }
