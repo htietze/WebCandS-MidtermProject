@@ -1,3 +1,9 @@
+/* 
+https://www.w3schools.com/css/css_positioning.asp
+Learned here how to keep things in place, so I could layer elements.
+*/
+
+/* the main element, position set to the bottom */
 #mainSection {
     position: absolute;
     z-index: -1;
@@ -9,6 +15,7 @@
     background-image: linear-gradient(to bottom right, blue, black);
 }
 
+/* Setting up the little Party header for the screen */
 #partyHeader {
     margin-top: -25px;
     border: 3px outset silver;
@@ -22,14 +29,15 @@
     text-shadow: 5px 3px 7px black;
 }
 
+/* each character has their image given a border and spaced vertically */
 .character {
     border: 3px outset silver;
     display: block;
-    margin-left: left;
     margin: 30px;
     box-shadow: 6px 6px 7px black;
 }
 
+/* This sets up the options element that has the items, equipment and such selections */
 #firstOptions {
     position: relative;
     width: 250px;
@@ -40,6 +48,7 @@
     background-image: linear-gradient(to bottom right, blue, black);
 }
 
+/* all the options have their color set and font selected */
 .optionItem {
     color: white;
     font-size: 24px;
@@ -49,8 +58,8 @@
     line-height: 10px;
 }
 
+/* the item menu element, given its position overlapping the main element */
 #itemMenu {
-    color: white;
     position: absolute;
     z-index: 1;
     height: 550px;
@@ -59,16 +68,18 @@
     left: 50px;
     border: 3px outset silver;
     background-image: linear-gradient(to bottom right, blue, black);
+}
+
+/* the item table itself is then given a font and text color */
+#itemTable {
+    margin: 10%;
+    border-collapse: collapse;
+    color: white;
     font-family: 'Squada One', cursive;
     font-size: larger;
 }
 
-#itemTable {
-    margin: 10%;
-    border-collapse: collapse;
-    white-space: nowrap;
-}
-
+/* table headers are aligned and a little border is placed under them */
 th {
     text-align: left;
     border-bottom: 1px solid white;
@@ -83,6 +94,7 @@ th {
     line-height: 25px;
 }
 
+/* formatting the equipment menu, same as the item menu */
 #equipMenu {
     position: absolute;
     z-index: 1;
@@ -94,6 +106,7 @@ th {
     background-image: linear-gradient(to bottom right, blue, black);
 }
 
+/* then the text in that menu is given a font and color */
 #equipText {
     color: white;
     font-size: 24px;
@@ -102,6 +115,10 @@ th {
     text-shadow: 5px 3px 7px black;
 }
 
+/* 
+This formats the small element in the bottom right 
+which contains the time and gold
+*/
 #partyInfo {
     border: 3px outset silver;
     color: white;
@@ -139,6 +156,7 @@ body {
     line-height: 6px;
 }
 
+/* positioning for the health and mana bars for each character */
 #firstHP {
     position: absolute;
     border: 1px outset silver;
@@ -193,6 +211,7 @@ body {
     top: 84%;
 }
 
+/* and then each characters names are placed above the bars. */
 #firstCharacter {
     position: absolute;
     left: 38%;
@@ -223,6 +242,7 @@ body {
     text-shadow: 5px 3px 7px black;
 }
 
+/* and all the bars are given a lil drop shadow. */
 .statBar {
     box-shadow: 6px 6px 7px black;
 }
